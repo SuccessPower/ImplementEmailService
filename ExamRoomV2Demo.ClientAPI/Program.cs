@@ -4,6 +4,7 @@ using EmailService.Interface;
 using ExamRoomV2Client.DataAccess.DbContext;
 using ExamRoomV2Client.DataAccess.Implementation;
 using ExamRoomV2Client.DataAccess.IService;
+using ExamRoomV2Client.DataAccess.Service;
 using ExamRoomV2Demo.ClientAPI.Models.Authentication.SignUp;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
@@ -44,6 +45,7 @@ builder.Services.AddSingleton(emailConfig);
 builder .Services.AddScoped<DbContext, ApplicationDbContext>();
 builder.Services .AddScoped<IAuthenticationuser,AuthenticateUser >();
 builder.Services.AddScoped<IEmailSender, EmailSender>();
+builder.Services.AddScoped<IClientUser, ClientUser>();
 builder.Services.AddAutoMapper(typeof(Program).Assembly);
 
 var app = builder.Build();
