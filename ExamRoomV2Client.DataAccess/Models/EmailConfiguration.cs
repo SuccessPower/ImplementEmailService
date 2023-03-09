@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EmailService
+namespace ExamRoomV2Client.DataAccess.Models
 {
     public class EmailConfiguration
     {

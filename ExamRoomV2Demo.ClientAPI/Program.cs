@@ -1,15 +1,14 @@
-using EmailService;
 using EmailService.Implementation;
 using EmailService.Interface;
 using ExamRoomV2Client.DataAccess.DbContext;
 using ExamRoomV2Client.DataAccess.Implementation;
 using ExamRoomV2Client.DataAccess.IService;
+using ExamRoomV2Client.DataAccess.Models;
 using ExamRoomV2Client.DataAccess.Service;
 using ExamRoomV2Demo.ClientAPI.Models.Authentication.SignUp;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 

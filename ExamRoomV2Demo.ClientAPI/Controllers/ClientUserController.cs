@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics.Metrics;
 
 namespace ExamRoomV2Demo.ClientAPI.Controllers
 {
@@ -9,12 +10,10 @@ namespace ExamRoomV2Demo.ClientAPI.Controllers
     [ApiController]
     public class ClientUserController : ControllerBase
     {
-        private readonly RoleManager<IdentityRole> _roleManager;
         private readonly IClientUser _clientUser;
 
-        public ClientUserController(RoleManager<IdentityRole> roleManager, IClientUser clientUser)
+        public ClientUserController(IClientUser clientUser)
         {
-            _roleManager = roleManager;
             _clientUser = clientUser;
         }
 
@@ -25,5 +24,20 @@ namespace ExamRoomV2Demo.ClientAPI.Controllers
             //var records = _mapper.Map<List<GetCountryDto>>(countries);
             return Ok(roles);
         }
+
+        //[HttpGet("Id")]
+        //public async Task<ActionResult<IdentityUser>> GetUser(string Id)
+        //{
+        //    var user = await _clientUser.GetUserAsync(Id);
+
+        //    //if (user == null)
+        //    //{
+        //    //    return BadRequest();
+        //    //}
+
+        //    ////var countryDto = _mapper.Map<CountryDto>(country);
+
+        //    return Ok(user);
+        //}
     }
 }

@@ -11,15 +11,12 @@ namespace ExamRoomV2Client.DataAccess.Implementation
     public class AuthenticateUser : IAuthenticationuser
     {
         private readonly UserManager<RegisterUser> _userManager;
-        private readonly IMapper _mapper;
         private readonly RoleManager<IdentityRole> _roleManager;
-        //private RegisterUser _user;
 
         public AuthenticateUser(UserManager<RegisterUser> userManager, IMapper mapper,
             RoleManager<IdentityRole> roleManager)
         {
             _userManager = userManager;
-            _mapper = mapper;
             _roleManager = roleManager;
 
 

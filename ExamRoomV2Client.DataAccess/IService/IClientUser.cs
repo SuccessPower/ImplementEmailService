@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using Org.BouncyCastle.Bcpg;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,5 +11,6 @@ namespace ExamRoomV2Client.DataAccess.IService
     public interface IClientUser
     {
         Task<List<IdentityRole>> GetAllRolesAsync();
+        //Task<IdentityUser> GetUserAsync(string Id);
     }
 }

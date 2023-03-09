@@ -9,6 +9,7 @@ namespace ExamRoomV2Client.DataAccess.Models.Dto
         public DateTime Created_Date { get; set; } = DateTime.Now;
         public string Group { get; set; }
         public string Status { get; set; }
+        public string UserName { get; set; } 
 
         [RegularExpression(@"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$", ErrorMessage = "Invalid email address.")]
         public string Email { get; set; }
